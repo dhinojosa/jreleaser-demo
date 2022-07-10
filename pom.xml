@@ -18,6 +18,8 @@
         </maven-surefire-report-plugin.version>
         <distribution.directory>${project.build.directory}/distributions/app
         </distribution.directory>
+        <jreleaser.checksum.skip>false</jreleaser.checksum.skip>
+        <jreleaser.checksum.skip>false</jreleaser.checksum.skip>
     </properties>
     <dependencyManagement>
         <dependencies>
