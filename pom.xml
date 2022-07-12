@@ -8,6 +8,32 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
+    <description>
+        A sample application that we can use with JReleaser
+    </description>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>dhinojosa</id>
+            <name>Daniel Hinojosa</name>
+            <email>dhinojosa@evolutionnex.tomc</email>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+            <timezone>America/Denver</timezone>
+        </developer>
+    </developers>
+
     <name>basic-app</name>
     <url>https://github.com/dhinojosa/basic-java-template</url>
 
@@ -137,6 +163,28 @@
                 <groupId>org.jreleaser</groupId>
                 <artifactId>jreleaser-maven-plugin</artifactId>
                 <version>1.1.0</version>
+                <configuration>
+                    <jreleaser>
+                        <announce>
+                            <mail>
+                                <active>ALWAYS</active>
+                                <host>mail.kattare.com</host>
+                                <transport>SMTP</transport>
+                                <from>admin@evolutionnext.com</from>
+                                <username>dhinojosa</username>
+                                <mimeType>TEXT</mimeType>
+                                <subject>{{projectNameCapitalized}}
+                                    {{projectVersion}} released!
+                                </subject>
+                                <message>
+                                    We just launched {{projectNameCapitalized}}
+                                    {{projectVersion}}!
+                                    {{changelog}}
+                                </message>
+                            </mail>
+                        </announce>
+                    </jreleaser>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -208,7 +256,8 @@
                 <artifactId>appassembler-maven-plugin</artifactId>
                 <version>2.1.0</version>
                 <configuration>
-                    <assembleDirectory>${project.build.directory}/binary</assembleDirectory>
+                    <assembleDirectory>${project.build.directory}/binary
+                    </assembleDirectory>
                     <repositoryLayout>flat</repositoryLayout>
                     <repositoryName>lib</repositoryName>
                     <programs>
