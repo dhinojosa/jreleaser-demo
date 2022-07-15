@@ -13,3 +13,4 @@ buildNumber.properties
 out/
 .jqwik-database
 trace.log
+**/*.swp
