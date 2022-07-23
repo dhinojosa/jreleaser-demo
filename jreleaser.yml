@@ -1,6 +1,6 @@
 project:
     name: jreleaser-demo
-    version: 0.0.3
+    version: 0.0.5
     description: JReleaser Demo
     longDescription: JReleaser Demo meant to show what the application provides
     website: https://github.com/dhinojosa/jreleaser-demo
@@ -17,6 +17,21 @@ release:
     github:
         owner: dhinojosa
 
+announce:
+    mail:
+        active: ALWAYS
+        transport: SMTP
+        mimeType: TEXT
+        port: 2525
+        auth: true
+        host: mail.kattare.com
+        username: dhinojosa
+        from: admin@evolutionnext.com
+        to: dhinojosa@evolutionnext.com
+        subject: New Release of JReleaser Topic Available
+        messageTemplate: src/jreleaser/releaseemail.tpl
+        properties:
+            'mail.smtp.starttls.enable': true
 
 assemble:
     archive:
@@ -26,6 +41,18 @@ assemble:
             distributionType: JAVA_BINARY
             fileSets:
                 -   input: 'target/classes'
+
+download:
+    http:
+        countries:
+            active: ALWAYS
+            connectTimeout: 20
+            readTimeout: 60
+            assets:
+                -   input: 'https://gist.github.com/sohailalam2/816e05eb6e68d030bbe52272785896c4/archive/d41648e6f4c04f8e77cd0598ae255ffb90c83aa4.zip'
+                    output: 'countries.zip'
+                    unpack:
+                        enabled: false
 
 distributions:
     jreleaser-demo-bin:
