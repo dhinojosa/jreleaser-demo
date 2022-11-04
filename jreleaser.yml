@@ -1,6 +1,6 @@
 project:
     name: jreleaser-demo
-    version: 0.0.7
+    version: 0.0.9
     description: JReleaser Demo
     longDescription: JReleaser Demo meant to show what the application provides
     website: https://github.com/dhinojosa/jreleaser-demo

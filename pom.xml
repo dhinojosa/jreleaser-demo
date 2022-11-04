@@ -5,7 +5,7 @@
 
     <groupId>com.evolutionnext</groupId>
     <artifactId>basic-app</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.9</version>
     <packaging>jar</packaging>
 
     <name>basic-app</name>
@@ -131,11 +131,20 @@
     </dependencies>
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.jreleaser</groupId>
-                <artifactId>jreleaser-maven-plugin</artifactId>
-                <version>1.1.0</version>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.jreleaser</groupId>-->
+<!--                <artifactId>jreleaser-maven-plugin</artifactId>-->
+<!--                <version>1.1.0</version>-->
+<!--                <configuration>-->
+<!--                    <releaser>-->
+<!--                        <release>-->
+<!--                            <github>-->
+<!--                                <owner></owner>-->
+<!--                            </github>-->
+<!--                        </release>-->
+<!--                    </releaser>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
