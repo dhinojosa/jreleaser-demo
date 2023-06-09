@@ -5,7 +5,7 @@
 
     <groupId>com.evolutionnext</groupId>
     <artifactId>basic-app</artifactId>
-    <version>0.0.9</version>
+    <version>0.0.10</version>
     <packaging>jar</packaging>
 
     <name>basic-app</name>
