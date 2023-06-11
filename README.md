@@ -1,9 +1,4 @@
-# basic-java-template
-Basic Java Template with Slf4j, Log4j, Junit Jupiter, Jacoco, AssertJ, JQwik
+# Do More with JReleaser
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/github.com/dhinojosa/jreleaser-demo)
 
-## Steps to use
-
-1. Select use template
-2. Create your repository
-3. Clone your repository
